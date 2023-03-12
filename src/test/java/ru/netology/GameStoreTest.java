@@ -17,6 +17,15 @@ public class GameStoreTest {
     }
 
     @Test
+    public void shouldNotFindGameIfNotAdded() {
+
+        GameStore store = new GameStore();
+
+        assertFalse(store.containsGame(null));
+    }
+
+
+    @Test
     public void shouldFindMostPlayer() {
 
         GameStore store = new GameStore();
@@ -48,6 +57,7 @@ public class GameStoreTest {
 
         assertNull(store.getMostPlayer());
     }
+
     @Test
     public void shouldGetSumPlayedTime() {
 
@@ -56,8 +66,9 @@ public class GameStoreTest {
         store.addPlayTime("Petya", 6);
         store.addPlayTime("Anton", 3);
         store.addPlayTime("Sergey", 9);
+        store.addPlayTime("Anton", 8);
 
-        int expected = 18;
+        int expected = 26;
         int actual = store.getSumPlayedTime();
 
         Assertions.assertEquals(expected, actual);

@@ -20,6 +20,7 @@ public class PlayerTest {
         int actual = player.sumGenre(game.getGenre());
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSumGenreIfTwoGames() {
         GameStore store = new GameStore();
@@ -78,6 +79,7 @@ public class PlayerTest {
 
 
     }
+
     @Test
     public void testPlayMethodGameNotInstalled() {
         GameStore store = new GameStore();
@@ -102,6 +104,7 @@ public class PlayerTest {
         assertTrue(player.mostPlayerByGenre("Аркады").equals(game));
 
     }
+
     @Test
     public void testMostPlayerByGenreNotPlayed() {
         GameStore store = new GameStore();
