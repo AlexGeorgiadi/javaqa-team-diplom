@@ -113,5 +113,4 @@ public class PlayerTest {
 
         assertNull(player.mostPlayerByGenre("Стратегии"));
     }
-    // другие ваши тесты
 }
